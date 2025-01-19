@@ -4,6 +4,8 @@
   "description": "Avaliar a habilidade do candidato em configurar um ambiente de testes, utilizar Git e aplicar conhecimentos básicos de Cypress e Javascript.",
   "main": "index.js",
   "scripts": {
+    "test": "cypress run",
+    "open": "cypress open",
     "e2e": "cypress run --reporter mocha-allure-reporter",
     "report:allure": "allure generate allure-results --clean -o allure-report && allure open  allure-report",
     "test:allure": "npm run e2e && allure generate allure-results --clean -o allure-report && allure open  allure-report",

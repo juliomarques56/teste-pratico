@@ -28,4 +28,4 @@ jobs:
           npm run prepare
 
       - name: Executando testes
-        run: npm run test:allure
+        run: npm run test
