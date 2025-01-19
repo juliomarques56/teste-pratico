@@ -22,7 +22,7 @@ describe('Validação da pagina meus emprestimos', () => {
   resolutions.forEach((resolution) => {
     // Cria um contexto de teste para cada resolução.
     context(`Teste em resolução ${resolution.id}`, () => {
-      // Antes de cada teste, ajusta o tamanho do viewport para a resolução atual.
+      // Antes de cada teste, ajusta o tamanho do viewport para a resolução atual
       beforeEach(() => {
         cy.viewport(resolution.width, resolution.height);
       });
