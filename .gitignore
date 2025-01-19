@@ -77,3 +77,7 @@ yarn-error.log*
 
 Dockerfile
 docker-compose.full.yaml
+
+screenshots
+allure-report
+allure-result
