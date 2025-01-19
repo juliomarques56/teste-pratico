@@ -26,7 +26,7 @@ describe('Validação da pagina meus emprestimos', () => {
       });
 
       it('Validar conteúdo inicial da página de empréstimos', () => {
-        // Valida se os textos esperados estão presentes nos elementos da página.
+        // Valida se os textos esperados estão presentes nos elementos da página
         cy.validatePageContent(loanPgSel.pageTitle, testData.pageTitle)
         cy.validatePageContent(loanPgSel.pageSubtitle, testData.pageSubtitle)
         cy.validatePageContent(loanPgSel.cpfInstruction, testData.cpfInstruction)
