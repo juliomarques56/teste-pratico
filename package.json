@@ -6,7 +6,10 @@
   "scripts": {
     "e2e": "cypress run --reporter mocha-allure-reporter",
     "report:allure": "allure generate allure-results --clean -o allure-report && allure open  allure-report",
-    "test:allure": "npm run e2e && allure generate allure-results --clean -o allure-report && allure open  allure-report"
+    "test:allure": "npm run e2e && allure generate allure-results --clean -o allure-report && allure open  allure-report",
+    "prepare": "husky install",
+    "lint": "eslint 'cypress/**/*.js' 'cypress/**/*.ts'",
+    "format": "prettier --write 'cypress/**/*.js' 'cypress/**/*.ts'"
   },
   "keywords": [],
   "author": "",
@@ -14,6 +17,22 @@
   "devDependencies": {
     "@shelex/cypress-allure-plugin": "^2.40.2",
     "cypress": "^14.0.0",
-    "mocha-allure-reporter": "^1.4.0"
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.1",
+    "mocha-allure-reporter": "^1.4.0",
+    "prettier": "^3.4.2"
+  },
+  "lint-staged": {
+    "*.js": [
+      "eslint --fix",
+      "prettier --write"
+    ],
+    "*.ts": [
+      "eslint --fix",
+      "prettier --write"
+    ]
   }
 }
