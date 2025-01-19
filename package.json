@@ -7,7 +7,7 @@
     "e2e": "cypress run --reporter mocha-allure-reporter",
     "report:allure": "allure generate allure-results --clean -o allure-report && allure open  allure-report",
     "test:allure": "npm run e2e && allure generate allure-results --clean -o allure-report && allure open  allure-report",
-    "prepare": "husky install",
+    "prepare": "husky",
     "lint": "eslint 'cypress/**/*.js' 'cypress/**/*.ts'",
     "format": "prettier --write 'cypress/**/*.js' 'cypress/**/*.ts'"
   },
@@ -15,10 +15,13 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
+    "@commitlint/cli": "^19.6.1",
+    "@commitlint/config-conventional": "^19.6.0",
     "@shelex/cypress-allure-plugin": "^2.40.2",
     "cypress": "^14.0.0",
     "eslint": "^9.18.0",
     "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-cypress": "^4.1.0",
     "eslint-plugin-prettier": "^5.2.3",
     "husky": "^9.1.7",
     "lint-staged": "^15.4.1",
