@@ -93,7 +93,7 @@ describe('Validação da pagina meus emprestimos', () => {
         cy.customScreenshot('contorno-campo-cpf-obrigatorio', resolution);
       });
 
-      it('Verificar link para Central de Ajuda', () => {
+      it('Validar link para Central de Ajuda', () => {
         // Clica no link da Central de Ajuda.
         cy.clickElement(loanPgSel.helpCenterLink);
 
